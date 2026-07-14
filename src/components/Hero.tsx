@@ -171,9 +171,8 @@ export function Hero() {
     <section className="hero" id="top" aria-label="Introduction">
       <div className="hero__layout">
         <div className="hero__content">
-          <p className="hero__eyebrow animate-in" style={{ animationDelay: "0.05s" }}>
+          <p className="hero__eyebrow animate-in" style={{ animationDelay: "0.05s",marginTop: "10px" }}>
             <PinIcon />
-            <br/>
             Dhaka, Bangladesh
           </p>
 

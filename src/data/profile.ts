@@ -17,7 +17,51 @@ export const profile = {
     "AI chatbots and OpenAI integrations, Web3 and crypto platforms, marketing automation, AWS architecture, and end-to-end delivery with Docker and Kubernetes.",
   quote:
     "Passionate about building scalable, secure and intelligent systems that drive real-world impact.",
+  aboutLead:
+    "Principal Software Engineer and Solution Architect with 15+ years of experience designing and delivering high-performance software systems and digital platforms. I combine deep technical expertise with strategic thinking to build scalable, secure, and future-ready solutions.",
+  aboutFocus:
+    "I specialize in AI-powered applications, Web3 and blockchain ecosystems, marketing automation, cloud architecture on AWS, and end-to-end delivery using Docker and Kubernetes.",
 } as const;
+
+export const aboutPillars = [
+  {
+    title: "Engineering Excellence",
+    detail:
+      "Clean architecture, modern technologies, and best practices that ensure quality and performance.",
+    icon: "code",
+  },
+  {
+    title: "Cloud & DevOps Expertise",
+    detail:
+      "AWS architecture, infrastructure automation, CI/CD pipelines, and observability for reliable and scalable systems.",
+    icon: "cloud",
+  },
+  {
+    title: "AI & Web3 Innovation",
+    detail:
+      "Building intelligent applications, blockchain platforms, and automation solutions that drive business value.",
+    icon: "ai",
+  },
+  {
+    title: "Leadership & Mentorship",
+    detail:
+      "Leading distributed teams, mentoring engineers, and fostering a culture of ownership and continuous growth.",
+    icon: "team",
+  },
+  {
+    title: "End-to-End Delivery",
+    detail:
+      "From ideation to deployment — delivering robust, secure, and user-focused solutions that make an impact.",
+    icon: "shield",
+  },
+] as const;
+
+export const aboutStats = [
+  { value: "15+ Years", label: "Professional Experience", icon: "calendar" },
+  { value: "50+ Projects", label: "Delivered Successfully", icon: "layers" },
+  { value: "40+ Developers", label: "Led & Mentored", icon: "users" },
+  { value: "Global Clients", label: "Across Multiple Industries", icon: "globe" },
+] as const;
 
 export const heroHighlights = [
   {
