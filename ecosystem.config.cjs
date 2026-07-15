@@ -4,6 +4,8 @@
  *   npm run build
  *   pm2 start ecosystem.config.cjs
  *   # or: npm run pm2:start
+ *
+ * Set SITE_URL=https://your-domain.com for HSTS + correct Open Graph URLs.
  */
 module.exports = {
   apps: [
@@ -20,6 +22,9 @@ module.exports = {
       env: {
         NODE_ENV: "production",
         PORT: 5001,
+        NEXT_TELEMETRY_DISABLED: "1",
+        // Override in production, e.g. SITE_URL=https://yousufali.dev
+        SITE_URL: process.env.SITE_URL || "http://localhost:5001",
       },
     },
   ],

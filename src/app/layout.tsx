@@ -6,18 +6,30 @@ const syne = Syne({
   variable: "--font-syne",
   subsets: ["latin"],
   weight: ["500", "600", "700", "800"],
+  display: "swap",
 });
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
+const siteUrl =
+  process.env.SITE_URL?.replace(/\/$/, "") ||
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  "http://localhost:5001";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Md Yousuf Ali · Principal Software Engineer",
   description:
     "Principal Software Engineer and Solution Architect with 15+ years of experience in AI systems, cloud architecture, blockchain platforms, and enterprise software delivery.",
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: [
       { url: "/favicon.png", type: "image/png" },
@@ -31,7 +43,17 @@ export const metadata: Metadata = {
     description:
       "Principal Software Engineer and Solution Architect specializing in AI, cloud, and scalable systems.",
     type: "website",
-    images: [{ url: "/images/yousuf.jpg" }],
+    url: "/",
+    images: [
+      { url: "/images/yousuf.jpg", width: 1011, height: 1024, alt: "Md Yousuf Ali" },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Md Yousuf Ali · Principal Software Engineer",
+    description:
+      "Principal Software Engineer and Solution Architect specializing in AI, cloud, and scalable systems.",
+    images: ["/images/yousuf.jpg"],
   },
 };
 

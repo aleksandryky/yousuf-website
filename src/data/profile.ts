@@ -4,7 +4,6 @@ export const profile = {
   title: "Principal Software Engineer",
   roles: ["Solution Architect", "AI & Cloud Systems"],
   location: "Dhaka, Bangladesh",
-  phone: "+8801739369769",
   email: "yousuf.gdls@gmail.com",
   linkedin: "https://linkedin.com/in/yousufcse06",
   linkedinLabel: "linkedin.com/in/yousufcse06",
