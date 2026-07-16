@@ -13,7 +13,7 @@ module.exports = {
       name: "yousuf-website",
       cwd: __dirname,
       script: "node_modules/next/dist/bin/next",
-      args: "start -p 5001",
+      args: "start -p 5002",
       instances: 1,
       exec_mode: "fork",
       autorestart: true,
@@ -21,10 +21,10 @@ module.exports = {
       max_memory_restart: "512M",
       env: {
         NODE_ENV: "production",
-        PORT: 5001,
+        PORT: 5002,
         NEXT_TELEMETRY_DISABLED: "1",
         // Override in production, e.g. SITE_URL=https://yousufali.dev
-        SITE_URL: process.env.SITE_URL || "http://localhost:5001",
+        SITE_URL: process.env.SITE_URL || "http://localhost:5002",
       },
     },
   ],

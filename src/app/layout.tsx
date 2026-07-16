@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Syne } from "next/font/google";
+import { JsonLd } from "@/components/JsonLd";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const syne = Syne({
@@ -16,20 +18,53 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const siteUrl =
-  process.env.SITE_URL?.replace(/\/$/, "") ||
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "http://localhost:5001";
+const siteUrl = getSiteUrl();
+
+const title = "Md Yousuf Ali · Principal Software Engineer";
+const description =
+  "Principal Software Engineer and Solution Architect with 15+ years of experience in AI systems, cloud architecture, blockchain platforms, and enterprise software delivery.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Md Yousuf Ali · Principal Software Engineer",
-  description:
-    "Principal Software Engineer and Solution Architect with 15+ years of experience in AI systems, cloud architecture, blockchain platforms, and enterprise software delivery.",
+  title: {
+    default: title,
+    template: "%s · Md Yousuf Ali",
+  },
+  description,
+  applicationName: "Md Yousuf Ali",
+  authors: [{ name: "Md Yousuf Ali", url: siteUrl }],
+  creator: "Md Yousuf Ali",
+  publisher: "Md Yousuf Ali",
+  keywords: [
+    "Md Yousuf Ali",
+    "Principal Software Engineer",
+    "Solution Architect",
+    "AI Engineer",
+    "Cloud Architect",
+    "AWS",
+    "Next.js",
+    "React",
+    "Laravel",
+    "Web3",
+    "Blockchain",
+    "Dhaka",
+    "Bangladesh",
+  ],
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
+  category: "technology",
   icons: {
     icon: [
       { url: "/favicon.png", type: "image/png" },
@@ -39,18 +74,25 @@ export const metadata: Metadata = {
     apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180" }],
   },
   openGraph: {
-    title: "Md Yousuf Ali · Principal Software Engineer",
+    title,
     description:
       "Principal Software Engineer and Solution Architect specializing in AI, cloud, and scalable systems.",
-    type: "website",
+    type: "profile",
     url: "/",
+    siteName: "Md Yousuf Ali",
+    locale: "en_US",
     images: [
-      { url: "/images/yousuf.jpg", width: 1011, height: 1024, alt: "Md Yousuf Ali" },
+      {
+        url: "/images/yousuf.jpg",
+        width: 1011,
+        height: 1024,
+        alt: "Md Yousuf Ali — Principal Software Engineer",
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Md Yousuf Ali · Principal Software Engineer",
+    title,
     description:
       "Principal Software Engineer and Solution Architect specializing in AI, cloud, and scalable systems.",
     images: ["/images/yousuf.jpg"],
@@ -68,7 +110,10 @@ export default function RootLayout({
       className={`${syne.variable} ${manrope.variable} h-full`}
       suppressHydrationWarning
     >
-      <body className="min-h-full antialiased">{children}</body>
+      <body className="min-h-full antialiased">
+        <JsonLd />
+        {children}
+      </body>
     </html>
   );
 }
