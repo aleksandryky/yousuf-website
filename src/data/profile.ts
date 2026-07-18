@@ -311,71 +311,105 @@ export const projects = [
     description:
       "Designed and developed a cross-platform vehicle security solution featuring real-time GPS tracking, geo-fencing, remote control, and monitoring capabilities using Next.js, PHP, and native iOS and Android applications.",
     url: "https://safelot.us",
+    category: "Platforms",
+    tags: ["Next.js", "PHP", "iOS", "Android", "GPS"],
+    featured: true,
   },
   {
     name: "Collect Tech LLC",
     description:
       "Technology-driven debt recovery platform for property managers, combining automated collection workflows, virtual agents, payment processing, reporting, and account management. Built with PHP and ASP.NET backends, SQL Server and MySQL databases, a Next.js and Tailwind CSS frontend, and AWS infrastructure.",
     url: "https://www.collecttech.com/",
+    category: "Fintech",
+    tags: ["PHP", "ASP.NET", "Next.js", "SQL Server", "AWS"],
+    featured: false,
   },
   {
     name: "Pelican Delivers",
     description:
       "Patented cannabis delivery marketplace connecting consumers with licensed local dispensaries for pickup and delivery — including dispensary storefront software, product cataloging, and end-to-end order fulfillment across legal markets.",
     url: "https://pelicandelivers.com/about",
+    category: "Platforms",
+    tags: ["Marketplace", "E-commerce", "Delivery", "AWS"],
+    featured: true,
   },
   {
     name: "AI Chatbot Platform",
     description:
       "Intelligent conversational AI for customer support automation using NLP and OpenAI/ChatGPT APIs across web, mobile, and social channels.",
     url: "https://sol-chat.app",
+    category: "AI",
+    tags: ["OpenAI", "ChatGPT", "NLP", "Next.js"],
+    featured: false,
   },
   {
     name: "Marketing Automation & Lead Generation",
     description:
       "Automation systems with ActiveCampaign, GoHighLevel, Instantly, and Apollo.io — email campaigns, lead scoring, CRM workflows, and sales funnels.",
     url: "https://gohighlevel.com",
+    category: "Automation",
+    tags: ["GoHighLevel", "ActiveCampaign", "Instantly", "Apollo.io"],
+    featured: false,
   },
   {
     name: "Cryptocurrency Exchange Platform",
     description:
       "Multi-currency exchange supporting Bitcoin, Ethereum, Litecoin, wallet integration, trading workflows, KYC, and payment gateway integrations.",
     url: "https://elibrax.com",
+    category: "Fintech",
+    tags: ["Blockchain", "Bitcoin", "Ethereum", "KYC", "Payments"],
+    featured: false,
   },
   {
     name: "LifeCrypto Web Application",
     description:
       "Blockchain-based crypto management with wallet integration, market data feeds, portfolio tracking, and automated trading features.",
     url: "https://lifedefi.co/",
+    category: "Blockchain",
+    tags: ["DeFi", "Web3", "Wallet", "Trading"],
+    featured: false,
   },
   {
     name: "Somee.blog",
     description:
       "Scalable blockchain-integrated social platform using microservices and event-driven architecture for high-traffic, low-latency interactions.",
     url: "https://somee.blog",
+    category: "Blockchain",
+    tags: ["Microservices", "Web3", "EDA", "Social"],
+    featured: false,
   },
   {
     name: "Round-Right Healthcare SaaS",
     description:
       "Full-stack platform with Next.js, PHP, AWS, Redis, and optimized MySQL — improving performance, reliability, and user experience.",
     url: "https://round-right.com",
+    category: "SaaS",
+    tags: ["Next.js", "PHP", "AWS", "Redis", "MySQL"],
+    featured: false,
   },
   {
     name: "Workflow Automation System",
     description:
       "Connected 10+ business applications using GHL, Make, and n8n — cutting manual operational effort by roughly 60%.",
     url: "https://gohighlevel.com",
+    category: "Automation",
+    tags: ["GoHighLevel", "n8n", "Make", "Integrations"],
+    featured: false,
   },
   {
     name: "CDR Monitoring Panel",
     description:
       "Real-time telecom analytics for IGW/ICX processing 1M+ call records daily with advanced reporting and visualization.",
+    category: "Platforms",
+    tags: ["PHP", "MySQL", "Telecom", "Analytics"],
+    featured: true,
   },
 ] as const;
 
 export const education = {
   degree: "Bachelor of Science in Computer Science & Engineering",
   school: "Khulna University of Engineering and Technology (KUET)",
+  url: "https://kuet.ac.bd/",
   location: "Bangladesh",
   year: "2011",
 } as const;

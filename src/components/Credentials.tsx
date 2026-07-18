@@ -125,7 +125,13 @@ export function Credentials() {
             <p className="edu-label">Education</p>
             <h2 className="edu-degree__title">{education.degree}</h2>
             <p className="edu-degree__meta">
-              {education.school}
+              <a
+                href={education.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {education.school}
+              </a>
               <span aria-hidden="true"> | </span>
               Graduated {education.year}
             </p>
