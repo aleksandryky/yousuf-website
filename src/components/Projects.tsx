@@ -14,7 +14,19 @@ export function Projects() {
         <ul className="project-list">
           {projects.map((project) => (
             <Reveal as="li" key={project.name} className="project-item">
-              <h3 className="project-name">{project.name}</h3>
+              <div>
+                <h3 className="project-name">{project.name}</h3>
+                {"url" in project && project.url ? (
+                  <a
+                    className="project-link"
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View project
+                  </a>
+                ) : null}
+              </div>
               <p className="project-desc">{project.description}</p>
             </Reveal>
           ))}

@@ -1120,6 +1120,19 @@ img {
   letter-spacing: -0.02em;
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 0.45rem;
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover {
+  color: var(--accent-deep);
+}
+
 .project-desc {
   margin: 0.55rem 0 0;
   color: var(--ink-muted);

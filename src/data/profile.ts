@@ -307,39 +307,64 @@ export const experience = [
 
 export const projects = [
   {
+    name: "SafeLot.us — Vehicle Security & Tracking Platform",
+    description:
+      "Designed and developed a cross-platform vehicle security solution featuring real-time GPS tracking, geo-fencing, remote control, and monitoring capabilities using Next.js, PHP, and native iOS and Android applications.",
+    url: "https://safelot.us",
+  },
+  {
+    name: "Collect Tech LLC",
+    description:
+      "Technology-driven debt recovery platform for property managers, combining automated collection workflows, virtual agents, payment processing, reporting, and account management. Built with PHP and ASP.NET backends, SQL Server and MySQL databases, a Next.js and Tailwind CSS frontend, and AWS infrastructure.",
+    url: "https://www.collecttech.com/",
+  },
+  {
+    name: "Pelican Delivers",
+    description:
+      "Patented cannabis delivery marketplace connecting consumers with licensed local dispensaries for pickup and delivery — including dispensary storefront software, product cataloging, and end-to-end order fulfillment across legal markets.",
+    url: "https://pelicandelivers.com/about",
+  },
+  {
     name: "AI Chatbot Platform",
     description:
       "Intelligent conversational AI for customer support automation using NLP and OpenAI/ChatGPT APIs across web, mobile, and social channels.",
+    url: "https://sol-chat.app",
   },
   {
     name: "Marketing Automation & Lead Generation",
     description:
       "Automation systems with ActiveCampaign, GoHighLevel, Instantly, and Apollo.io — email campaigns, lead scoring, CRM workflows, and sales funnels.",
+    url: "https://gohighlevel.com",
   },
   {
     name: "Cryptocurrency Exchange Platform",
     description:
       "Multi-currency exchange supporting Bitcoin, Ethereum, Litecoin, wallet integration, trading workflows, KYC, and payment gateway integrations.",
+    url: "https://elibrax.com",
   },
   {
     name: "LifeCrypto Web Application",
     description:
       "Blockchain-based crypto management with wallet integration, market data feeds, portfolio tracking, and automated trading features.",
+    url: "https://lifedefi.co/",
   },
   {
     name: "Somee.blog",
     description:
       "Scalable blockchain-integrated social platform using microservices and event-driven architecture for high-traffic, low-latency interactions.",
+    url: "https://somee.blog",
   },
   {
     name: "Round-Right Healthcare SaaS",
     description:
       "Full-stack platform with Next.js, PHP, AWS, Redis, and optimized MySQL — improving performance, reliability, and user experience.",
+    url: "https://round-right.com",
   },
   {
     name: "Workflow Automation System",
     description:
       "Connected 10+ business applications using GHL, Make, and n8n — cutting manual operational effort by roughly 60%.",
+    url: "https://gohighlevel.com",
   },
   {
     name: "CDR Monitoring Panel",
