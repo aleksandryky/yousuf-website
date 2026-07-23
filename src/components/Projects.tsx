@@ -1,27 +1,25 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { ArchitectureDiagram } from "@/components/ArchitectureDiagram";
 import { Reveal } from "@/components/Reveal";
 import { projects } from "@/data/profile";
 
 const filters = [
-  "All projects",
-  "Platforms",
-  "Fintech",
-  "AI",
-  "Blockchain",
-  "Automation",
-  "SaaS",
+  "All case studies",
+  "Cloud & Systems",
+  "AI Integration",
+  "Fintech & IoT",
 ] as const;
 
 type Filter = (typeof filters)[number];
 
 export function Projects() {
-  const [activeFilter, setActiveFilter] = useState<Filter>("All projects");
+  const [activeFilter, setActiveFilter] = useState<Filter>("All case studies");
 
   const visibleProjects = useMemo(
     () =>
-      activeFilter === "All projects"
+      activeFilter === "All case studies"
         ? projects
         : projects.filter((project) => project.category === activeFilter),
     [activeFilter],
@@ -32,18 +30,18 @@ export function Projects() {
       <div className="container work">
         <Reveal className="work-head">
           <div>
-            <p className="work-kicker">Selected work</p>
-            <h2 className="work-title">Projects that shaped the craft</h2>
+            <p className="work-kicker">Architectural case studies</p>
+            <h2 className="work-title">Problems, decisions, and measurable impact</h2>
           </div>
           <p className="work-intro">
-            Eleven products architected and shipped end to end across
-            automotive IoT, fintech, AI, blockchain, automation, platforms,
-            and SaaS.
+            Selected systems framed the way principal architects brief stakeholders — challenge,
+            architectural decision, and outcome — across cloud platforms, AI integration, and
+            fintech / IoT products.
           </p>
         </Reveal>
 
         <Reveal className="work-filter-wrap">
-          <div className="work-filters" aria-label="Filter selected work">
+          <div className="work-filters" aria-label="Filter case studies">
             {filters.map((filter) => (
               <button
                 key={filter}
@@ -60,9 +58,7 @@ export function Projects() {
 
         <ol className="project-list" aria-live="polite">
           {visibleProjects.map((project) => {
-            const projectNumber = projects.findIndex(
-              (item) => item.name === project.name,
-            );
+            const projectNumber = projects.findIndex((item) => item.name === project.name);
 
             return (
               <Reveal as="li" key={project.name} className="project-item">
@@ -75,9 +71,6 @@ export function Projects() {
                     ) : null}
                   </p>
                   <h3 className="project-name">{project.name}</h3>
-                </div>
-
-                <div className="project-details">
                   {"url" in project && project.url ? (
                     <a
                       className="project-link"
@@ -90,11 +83,30 @@ export function Projects() {
                       <span aria-hidden="true">↗</span>
                     </a>
                   ) : (
-                    <span className="project-link project-link--muted">
-                      Internal system
-                    </span>
+                    <span className="project-link project-link--muted">Internal system</span>
                   )}
-                  <p className="project-desc">{project.description}</p>
+                </div>
+
+                <div className="project-details">
+                  <dl className="case-framework">
+                    <div>
+                      <dt>Challenge / Scale</dt>
+                      <dd>{project.challenge}</dd>
+                    </div>
+                    <div>
+                      <dt>Architectural decision</dt>
+                      <dd>{project.decision}</dd>
+                    </div>
+                    <div>
+                      <dt>Measurable impact</dt>
+                      <dd>{project.impact}</dd>
+                    </div>
+                  </dl>
+
+                  {"diagram" in project && project.diagram ? (
+                    <ArchitectureDiagram id={project.diagram} />
+                  ) : null}
+
                   <ul className="project-tags" aria-label={`${project.name} technologies`}>
                     {project.tags.map((tag) => (
                       <li key={tag}>{tag}</li>
@@ -107,7 +119,7 @@ export function Projects() {
         </ol>
 
         {visibleProjects.length === 0 ? (
-          <p className="work-empty">No projects in this category yet.</p>
+          <p className="work-empty">No case studies in this category yet.</p>
         ) : null}
       </div>
     </section>

@@ -8,18 +8,21 @@ export const profile = {
   linkedin: "https://linkedin.com/in/yousufcse06",
   linkedinLabel: "linkedin.com/in/yousufcse06",
   cvPath: "/cv/Md_Yousuf_Ali_CV.pdf",
+  bookingUrl: "https://calendly.com/yousuf-gdls/30min",
+  bookingLabel: "Schedule an Architecture Consultation",
   photo: "/images/yousuf.jpg",
-  headline: "Architecting systems that scale — from AI workflows to cloud platforms.",
+  headline:
+    "Architecting resilient cloud infrastructure, enterprise distributed systems, and AI-driven automation workflows.",
   summary:
-    "Principal Software Engineer and Solution Architect with 15+ years designing high-performance software systems, AI-driven products, blockchain platforms, and enterprise cloud infrastructure. Known for technical leadership, distributed systems, and mentoring engineering teams to ship reliable software.",
+    "Principal Software Engineer and Solution Architect with 15+ years designing high-performance software systems, AI-driven products, and enterprise cloud infrastructure. Known for technical leadership, distributed systems, and mentoring engineering teams to ship reliable software.",
   focus:
-    "AI chatbots and OpenAI integrations, Web3 and crypto platforms, marketing automation, AWS architecture, and end-to-end delivery with Docker and Kubernetes.",
+    "Deep focus on cloud architecture, distributed systems, and AI automation — with supporting depth across data platforms, DevOps, and specialized product ecosystems.",
   quote:
     "Passionate about building scalable, secure and intelligent systems that drive real-world impact.",
   aboutLead:
     "Principal Software Engineer and Solution Architect with 15+ years of experience designing and delivering high-performance software systems and digital platforms. I combine deep technical expertise with strategic thinking to build scalable, secure, and future-ready solutions.",
   aboutFocus:
-    "I specialize in AI-powered applications, Web3 and blockchain ecosystems, marketing automation, cloud architecture on AWS, and end-to-end delivery using Docker and Kubernetes.",
+    "My flagship work centers on resilient AWS architecture, enterprise distributed systems, and AI-driven automation — supported by end-to-end delivery with Docker, Kubernetes, and modern full-stack platforms.",
 } as const;
 
 export const aboutPillars = [
@@ -64,24 +67,19 @@ export const aboutStats = [
 
 export const heroHighlights = [
   {
-    title: "AI & Automation",
-    detail: "Designing intelligent systems and workflows.",
-    icon: "ai",
-  },
-  {
-    title: "Cloud Architecture",
-    detail: "Scalable, secure and high availability systems.",
+    title: "Cloud Infrastructure",
+    detail: "Resilient AWS platforms with high availability and clear operational ownership.",
     icon: "cloud",
   },
   {
-    title: "Full Stack Expertise",
-    detail: "Modern technologies for robust solutions.",
+    title: "Distributed Systems",
+    detail: "Event-driven services, bounded contexts, and architectures that scale under load.",
     icon: "code",
   },
   {
-    title: "Leadership",
-    detail: "Leading teams and delivering impact.",
-    icon: "team",
+    title: "AI Automation",
+    detail: "Production OpenAI workflows that remove manual effort and accelerate delivery.",
+    icon: "ai",
   },
 ] as const;
 
@@ -308,101 +306,147 @@ export const experience = [
 export const projects = [
   {
     name: "SafeLot.us — Vehicle Security & Tracking Platform",
-    description:
-      "Designed and developed a cross-platform vehicle security solution featuring real-time GPS tracking, geo-fencing, remote control, and monitoring capabilities using Next.js, PHP, and native iOS and Android applications.",
-    url: "https://safelot.us",
-    category: "Platforms",
-    tags: ["Next.js", "PHP", "iOS", "Android", "GPS"],
+    category: "Fintech & IoT",
+    tags: ["Next.js", "WebSockets", "AWS", "IoT", "Mobile"],
     featured: true,
+    diagram: "safelot",
+    url: "https://safelot.us",
+    challenge:
+      "Needed a low-latency IoT platform to process real-time vehicle telemetry, geo-fencing events, and remote commands across thousands of connected assets.",
+    decision:
+      "Designed an event-driven architecture with Next.js control planes, websocket fan-out, PHP services, and AWS auto-scaling around GPS ingestion and alerting pipelines.",
+    impact:
+      "Delivered sub-second location updates with continuous monitoring, geo-fence enforcement, and cross-platform control for web, iOS, and Android clients.",
   },
   {
     name: "Collect Tech LLC",
-    description:
-      "Technology-driven debt recovery platform for property managers, combining automated collection workflows, virtual agents, payment processing, reporting, and account management. Built with PHP and ASP.NET backends, SQL Server and MySQL databases, a Next.js and Tailwind CSS frontend, and AWS infrastructure.",
-    url: "https://www.collecttech.com/",
-    category: "Fintech",
+    category: "Fintech & IoT",
     tags: ["PHP", "ASP.NET", "Next.js", "SQL Server", "AWS"],
     featured: false,
+    url: "https://www.collecttech.com/",
+    challenge:
+      "Property managers needed a reliable debt-recovery system that could automate outreach, payments, and account workflows without losing auditability.",
+    decision:
+      "Architected a dual-backend platform (PHP + ASP.NET) with Next.js operator UI, SQL Server/MySQL persistence, and AWS-hosted services for payments and reporting.",
+    impact:
+      "Unified collections, virtual agents, and payment operations into one recoverable workflow surface for property teams.",
   },
   {
     name: "Pelican Delivers",
-    description:
-      "Patented cannabis delivery marketplace connecting consumers with licensed local dispensaries for pickup and delivery — including dispensary storefront software, product cataloging, and end-to-end order fulfillment across legal markets.",
-    url: "https://pelicandelivers.com/about",
-    category: "Platforms",
-    tags: ["Marketplace", "E-commerce", "Delivery", "AWS"],
+    category: "Fintech & IoT",
+    tags: ["Marketplace", "Catalog", "Fulfillment", "AWS"],
     featured: true,
+    url: "https://pelicandelivers.com/about",
+    challenge:
+      "Licensed dispensaries needed a compliant marketplace that could handle catalog sync, pickup/delivery routing, and multi-market order fulfillment.",
+    decision:
+      "Built a marketplace and storefront architecture separating catalog, order orchestration, and fulfillment flows so each legal market could operate independently.",
+    impact:
+      "Enabled end-to-end consumer-to-dispensary fulfillment with patented delivery workflows across regulated regions.",
   },
   {
     name: "AI Chatbot Platform",
-    description:
-      "Intelligent conversational AI for customer support automation using NLP and OpenAI/ChatGPT APIs across web, mobile, and social channels.",
-    url: "https://sol-chat.app",
-    category: "AI",
-    tags: ["OpenAI", "ChatGPT", "NLP", "Next.js"],
+    category: "AI Integration",
+    tags: ["OpenAI", "NLP", "Next.js", "Omnichannel"],
     featured: false,
+    url: "https://sol-chat.app",
+    challenge:
+      "Support teams needed conversational automation that could resolve intent across web, mobile, and social channels without fragmenting context.",
+    decision:
+      "Designed an OpenAI-backed conversational layer with channel adapters, prompt tooling, and escalation paths into human support queues.",
+    impact:
+      "Reduced repetitive support load while keeping handoff quality intact across customer touchpoints.",
   },
   {
     name: "Marketing Automation & Lead Generation",
-    description:
-      "Automation systems with ActiveCampaign, GoHighLevel, Instantly, and Apollo.io — email campaigns, lead scoring, CRM workflows, and sales funnels.",
-    url: "https://gohighlevel.com",
-    category: "Automation",
-    tags: ["GoHighLevel", "ActiveCampaign", "Instantly", "Apollo.io"],
+    category: "AI Integration",
+    tags: ["GoHighLevel", "ActiveCampaign", "Apollo.io", "Instantly"],
     featured: false,
+    url: "https://gohighlevel.com",
+    challenge:
+      "Growth teams were operating disconnected CRM, email, and outbound tools with inconsistent lead scoring and funnel stages.",
+    decision:
+      "Implemented an automation fabric across ActiveCampaign, GoHighLevel, Instantly, and Apollo.io with shared scoring and nurture logic.",
+    impact:
+      "Created measurable campaign operations with tighter lead qualification and fewer manual handoffs.",
   },
   {
     name: "Cryptocurrency Exchange Platform",
-    description:
-      "Multi-currency exchange supporting Bitcoin, Ethereum, Litecoin, wallet integration, trading workflows, KYC, and payment gateway integrations.",
-    url: "https://elibrax.com",
-    category: "Fintech",
-    tags: ["Blockchain", "Bitcoin", "Ethereum", "KYC", "Payments"],
+    category: "Fintech & IoT",
+    tags: ["Blockchain", "Wallets", "KYC", "Payments"],
     featured: false,
+    url: "https://elibrax.com",
+    challenge:
+      "Required a multi-currency trading platform with wallet custody flows, KYC gates, and payment rails that could survive volatile market traffic.",
+    decision:
+      "Structured trading, wallet, KYC, and payment domains as separable services with strict transaction and compliance boundaries.",
+    impact:
+      "Shipped an exchange supporting Bitcoin, Ethereum, Litecoin, and operational monitoring for trading and onboarding journeys.",
   },
   {
     name: "LifeCrypto Web Application",
-    description:
-      "Blockchain-based crypto management with wallet integration, market data feeds, portfolio tracking, and automated trading features.",
-    url: "https://lifedefi.co/",
-    category: "Blockchain",
-    tags: ["DeFi", "Web3", "Wallet", "Trading"],
+    category: "Fintech & IoT",
+    tags: ["DeFi", "Web3", "Portfolio", "Trading"],
     featured: false,
+    url: "https://lifedefi.co/",
+    challenge:
+      "Users needed a crypto management experience combining wallets, market data, portfolio tracking, and automated trading signals.",
+    decision:
+      "Composed wallet connectivity, market feeds, and portfolio services behind a unified Web3 application shell.",
+    impact:
+      "Delivered a blockchain management product with portfolio visibility and automated trading features.",
   },
   {
     name: "Somee.blog",
-    description:
-      "Scalable blockchain-integrated social platform using microservices and event-driven architecture for high-traffic, low-latency interactions.",
-    url: "https://somee.blog",
-    category: "Blockchain",
-    tags: ["Microservices", "Web3", "EDA", "Social"],
+    category: "Cloud & Systems",
+    tags: ["Microservices", "EDA", "Web3", "Social"],
     featured: false,
+    url: "https://somee.blog",
+    challenge:
+      "A high-traffic social platform needed low-latency interactions while integrating blockchain features without coupling every write path.",
+    decision:
+      "Adopted microservices and event-driven messaging so social interactions, feeds, and on-chain actions could scale independently.",
+    impact:
+      "Supported high-traffic, low-latency engagement patterns on a blockchain-integrated social architecture.",
   },
   {
     name: "Round-Right Healthcare SaaS",
-    description:
-      "Full-stack platform with Next.js, PHP, AWS, Redis, and optimized MySQL — improving performance, reliability, and user experience.",
-    url: "https://round-right.com",
-    category: "SaaS",
+    category: "Cloud & Systems",
     tags: ["Next.js", "PHP", "AWS", "Redis", "MySQL"],
     featured: false,
+    url: "https://round-right.com",
+    challenge:
+      "A healthcare SaaS needed stronger reliability and response times as concurrent clinical workflows increased.",
+    decision:
+      "Hardened the stack with Next.js + PHP services on AWS, Redis caching, and MySQL query/path optimization.",
+    impact:
+      "Improved performance, reliability, and day-to-day operator experience under production load.",
   },
   {
     name: "Workflow Automation System",
-    description:
-      "Connected 10+ business applications using GHL, Make, and n8n — cutting manual operational effort by roughly 60%.",
-    url: "https://gohighlevel.com",
-    category: "Automation",
+    category: "AI Integration",
     tags: ["GoHighLevel", "n8n", "Make", "Integrations"],
     featured: false,
+    url: "https://gohighlevel.com",
+    challenge:
+      "Operations depended on manual swivel-chair work across more than ten business applications.",
+    decision:
+      "Designed integration workflows in GoHighLevel, Make, and n8n with explicit triggers, retries, and ownership boundaries.",
+    impact:
+      "Cut manual operational effort by roughly 60% while keeping cross-app processes observable.",
   },
   {
     name: "CDR Monitoring Panel",
-    description:
-      "Real-time telecom analytics for IGW/ICX processing 1M+ call records daily with advanced reporting and visualization.",
-    category: "Platforms",
+    category: "Cloud & Systems",
     tags: ["PHP", "MySQL", "Telecom", "Analytics"],
     featured: true,
+    diagram: "cdr",
+    challenge:
+      "Telecom operators needed real-time visibility into IGW/ICX call detail records at million-record daily volume.",
+    decision:
+      "Built an analytics control plane for high-volume CDR ingestion, aggregation, and operational dashboards with PHP and MySQL.",
+    impact:
+      "Processed 1M+ call records daily with advanced reporting for monitoring, investigation, and operational decision-making.",
   },
 ] as const;
 
@@ -453,127 +497,48 @@ export const strengths = [
   },
 ] as const;
 
-export const toolCategories = [
-  { id: "all", label: "All" },
-  { id: "frameworks", label: "Frameworks" },
-  { id: "cloud", label: "Cloud" },
-  { id: "ai", label: "AI" },
-  { id: "devops", label: "DevOps" },
-  { id: "automation", label: "Automation" },
+export const toolDomains = [
+  {
+    id: "primary",
+    title: "Primary Stack / Daily Architecture",
+    summary:
+      "The systems I design and review every week — cloud foundations, application platforms, and delivery infrastructure.",
+    items: ["AWS", "Node.js", "Next.js", "Laravel", "Docker", "Kubernetes"],
+  },
+  {
+    id: "integrations",
+    title: "Integrations & Data Systems",
+    summary:
+      "Data planes and integration patterns that keep products fast, consistent, and automation-ready.",
+    items: ["Redis", "MySQL", "OpenAI APIs", "n8n", "Event-Driven Architecture"],
+  },
+  {
+    id: "specialized",
+    title: "Specialized Ecosystems",
+    summary:
+      "Domain platforms I deploy when product strategy calls for Web3 or growth automation depth.",
+    items: ["Web3 / Smart Contracts", "Marketing Automation"],
+  },
 ] as const;
 
-export const tools = [
+export const testimonials = [
   {
-    id: "laravel",
-    name: "Laravel",
-    mark: "Lv",
-    level: 95,
-    category: "frameworks",
+    quote:
+      "Yousuf elevates conversations from feature delivery to system design. He helped us clarify service boundaries, failure modes, and what actually needed to scale first.",
+    name: "David N Baker",
+    context: "Land Value Alpha Fund LLC",
   },
   {
-    id: "nextjs",
-    name: "Next.js",
-    mark: "N",
-    level: 90,
-    category: "frameworks",
+    quote:
+      "As a mentee on his team, I learned how principal engineers think — trade-offs, operability, and ownership. Reviews were rigorous, practical, and career-shaping.",
+    name: "Anowar Hossain",
+    context: "Cloud It Limited",
   },
   {
-    id: "react",
-    name: "React",
-    mark: "Re",
-    level: 90,
-    category: "frameworks",
-  },
-  {
-    id: "nodejs",
-    name: "Node.js",
-    mark: "No",
-    level: 85,
-    category: "frameworks",
-  },
-  {
-    id: "aws",
-    name: "AWS",
-    mark: "AWS",
-    level: 92,
-    category: "cloud",
-  },
-  {
-    id: "mysql",
-    name: "MySQL",
-    mark: "SQL",
-    level: 90,
-    category: "cloud",
-  },
-  {
-    id: "redis",
-    name: "Redis",
-    mark: "Rd",
-    level: 85,
-    category: "cloud",
-  },
-  {
-    id: "openai",
-    name: "OpenAI",
-    mark: "AI",
-    level: 88,
-    category: "ai",
-  },
-  {
-    id: "chatgpt",
-    name: "ChatGPT",
-    mark: "GPT",
-    level: 88,
-    category: "ai",
-  },
-  {
-    id: "docker",
-    name: "Docker",
-    mark: "Dk",
-    level: 90,
-    category: "devops",
-  },
-  {
-    id: "kubernetes",
-    name: "Kubernetes",
-    mark: "K8",
-    level: 82,
-    category: "devops",
-  },
-  {
-    id: "n8n",
-    name: "n8n",
-    mark: "n8n",
-    level: 85,
-    category: "automation",
-  },
-  {
-    id: "gohighlevel",
-    name: "GoHighLevel",
-    mark: "GHL",
-    level: 85,
-    category: "automation",
-  },
-  {
-    id: "activecampaign",
-    name: "ActiveCampaign",
-    mark: "AC",
-    level: 80,
-    category: "automation",
-  },
-  {
-    id: "make",
-    name: "Make",
-    mark: "Mk",
-    level: 80,
-    category: "automation",
-  },
-  {
-    id: "web3",
-    name: "Web3",
-    mark: "W3",
-    level: 82,
-    category: "ai",
+    quote:
+      "He bridges architecture and execution. Complex integrations shipped with clear contracts, observability, and a team that understood the why behind every decision.",
+    name: "Mujibor Rahman",
+    context: "Cention AB",
   },
 ] as const;
 
@@ -583,5 +548,6 @@ export const nav = [
   { label: "Tools", href: "#tools" },
   { label: "Experience", href: "#experience" },
   { label: "Work", href: "#work" },
+  { label: "Proof", href: "#proof" },
   { label: "Contact", href: "#contact" },
 ] as const;

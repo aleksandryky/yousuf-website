@@ -203,13 +203,16 @@ export function Hero() {
           </ul>
 
           <div className="hero__actions animate-in" style={{ animationDelay: "0.44s" }}>
-            <a className="btn btn--primary" href="#contact">
+            <a className="btn btn--primary" href={profile.bookingUrl} target="_blank" rel="noopener noreferrer">
               <MailIcon />
-              Get in touch
+              {profile.bookingLabel}
+            </a>
+            <a className="btn btn--ghost" href={profile.cvPath} download>
+              <BriefcaseIcon />
+              Download CV
             </a>
             <a className="btn btn--ghost" href="#work">
-              <BriefcaseIcon />
-              View selected work
+              View case studies
             </a>
           </div>
 

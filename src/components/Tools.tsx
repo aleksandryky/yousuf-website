@@ -1,68 +1,7 @@
-"use client";
-
-import { useEffect, useId, useState, type CSSProperties } from "react";
 import { Reveal } from "@/components/Reveal";
-import { toolCategories, tools } from "@/data/profile";
-
-const RADIUS = 42;
-const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
-
-type CategoryId = (typeof toolCategories)[number]["id"];
-
-function ToolGauge({
-  name,
-  mark,
-  level,
-  animate,
-}: {
-  name: string;
-  mark: string;
-  level: number;
-  animate: boolean;
-}) {
-  const offset = CIRCUMFERENCE * (1 - level / 100);
-
-  return (
-    <li className="tool-item">
-      <div className="tool-gauge" aria-label={`${name} proficiency ${level} percent`}>
-        <svg className="tool-gauge__svg" viewBox="0 0 100 100" aria-hidden="true">
-          <circle className="tool-gauge__track" cx="50" cy="50" r={RADIUS} />
-          <circle
-            className={`tool-gauge__progress${animate ? " is-animated" : ""}`}
-            cx="50"
-            cy="50"
-            r={RADIUS}
-            strokeDasharray={CIRCUMFERENCE}
-            strokeDashoffset={animate ? offset : CIRCUMFERENCE}
-            style={
-              animate ? ({ "--tool-offset": offset } as CSSProperties) : undefined
-            }
-          />
-        </svg>
-        <div className="tool-gauge__core">
-          <span className="tool-gauge__mark">{mark}</span>
-          <span className="tool-gauge__level">{level}%</span>
-        </div>
-      </div>
-      <p className="tool-item__name">{name}</p>
-    </li>
-  );
-}
+import { toolDomains } from "@/data/profile";
 
 export function Tools() {
-  const [active, setActive] = useState<CategoryId>("all");
-  const [animate, setAnimate] = useState(false);
-  const baseId = useId();
-
-  const filtered =
-    active === "all" ? tools : tools.filter((tool) => tool.category === active);
-
-  useEffect(() => {
-    setAnimate(false);
-    const frame = requestAnimationFrame(() => setAnimate(true));
-    return () => cancelAnimationFrame(frame);
-  }, [active]);
-
   return (
     <section className="section section--tools" id="tools">
       <div className="container">
@@ -77,51 +16,30 @@ export function Tools() {
               </svg>
               Tools &amp; Platforms
             </p>
-            <h2 className="section-title">Systems I build with every week</h2>
+            <h2 className="section-title">Capability by domain</h2>
+            <p className="tools-lede">
+              Grouped by how I actually use them: daily architecture, data/integration systems, and
+              specialized product ecosystems.
+            </p>
           </div>
         </Reveal>
 
-        <Reveal>
-          <div className="tools-nav" role="tablist" aria-label="Tool categories">
-            {toolCategories.map((category) => {
-              const selected = category.id === active;
-              return (
-                <button
-                  key={category.id}
-                  type="button"
-                  role="tab"
-                  id={`${baseId}-tab-${category.id}`}
-                  aria-selected={selected}
-                  aria-controls={`${baseId}-panel`}
-                  className={`tools-nav__btn${selected ? " is-active" : ""}`}
-                  onClick={() => setActive(category.id)}
-                >
-                  {category.label}
-                </button>
-              );
-            })}
-          </div>
-        </Reveal>
-
-        <Reveal>
-          <ul
-            className="tools-grid"
-            role="tabpanel"
-            id={`${baseId}-panel`}
-            aria-labelledby={`${baseId}-tab-${active}`}
-            key={active}
-          >
-            {filtered.map((tool) => (
-              <ToolGauge
-                key={tool.id}
-                name={tool.name}
-                mark={tool.mark}
-                level={tool.level}
-                animate={animate}
-              />
-            ))}
-          </ul>
-        </Reveal>
+        <div className="tools-tiers">
+          {toolDomains.map((domain, index) => (
+            <Reveal key={domain.id} className="tools-tier">
+              <p className="tools-tier__index">{String(index + 1).padStart(2, "0")}</p>
+              <div className="tools-tier__body">
+                <h3 className="tools-tier__title">{domain.title}</h3>
+                <p className="tools-tier__summary">{domain.summary}</p>
+                <ul className="tools-tier__items">
+                  {domain.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

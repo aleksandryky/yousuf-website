@@ -60,12 +60,41 @@ function DocIcon() {
   );
 }
 
+function CalendarIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect
+        x="3.5"
+        y="5"
+        width="17"
+        height="15"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M8 3.5v3M16 3.5v3M3.5 9.5h17"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 const contactItems = [
   {
     label: "Email",
     value: profile.email,
     href: `mailto:${profile.email}`,
     icon: <MailIcon />,
+  },
+  {
+    label: "Book",
+    value: profile.bookingLabel,
+    href: profile.bookingUrl,
+    external: true,
+    icon: <CalendarIcon />,
   },
   {
     label: "LinkedIn",
@@ -92,8 +121,8 @@ export function Contact() {
             <p className="contact-kicker">Contact</p>
             <h2 className="contact-title">Let&apos;s build the next system together.</h2>
             <p className="contact-lede">
-              Have a project in mind or want to collaborate? Reach out and let&apos;s create
-              something great.
+              Architecture reviews, platform engagements, or technical leadership conversations —
+              reach out or book a consultation directly.
             </p>
           </div>
         </Reveal>
