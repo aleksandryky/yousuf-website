@@ -268,7 +268,8 @@ export const experience = [
     role: "Principal Software Engineer",
     company: "Silicon Orchard Limited",
     location: "Dhaka, Bangladesh",
-    period: "April 2016 — Present",
+    period: "April 2016 – Present",
+    type: "Full-time",
     highlights: [
       "Lead architecture and development of scalable enterprise applications and distributed systems.",
       "Manage multiple development teams of 10+ engineers and coordinate technical delivery.",
@@ -282,7 +283,8 @@ export const experience = [
     role: "Senior Software Developer",
     company: "Cloud IT Limited",
     location: "Dhaka, Bangladesh",
-    period: "May 2013 — March 2016",
+    period: "May 2013 – March 2016",
+    type: "Full-time",
     highlights: [
       "Developed enterprise web applications using PHP, Laravel, CodeIgniter, and modern front-end stacks.",
       "Integrated payment gateways, third-party APIs, and external services.",
@@ -294,7 +296,8 @@ export const experience = [
     role: "Software Developer",
     company: "Cention AB",
     location: "Dhaka, Bangladesh",
-    period: "January 2011 — May 2013",
+    period: "January 2011 – May 2013",
+    type: "Full-time",
     highlights: [
       "Developed backend services and customer management systems.",
       "Collaborated with international teams using Agile practices across time zones.",
