@@ -125,11 +125,7 @@ export function Credentials() {
             <p className="edu-label">Education</p>
             <h2 className="edu-degree__title">{education.degree}</h2>
             <p className="edu-degree__meta">
-              <a
-                href={education.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={education.url} target="_blank" rel="noopener noreferrer">
                 {education.school}
               </a>
               <span aria-hidden="true"> | </span>
@@ -152,10 +148,13 @@ export function Credentials() {
               {certifications.map((item) => (
                 <li key={item.title}>
                   <span className="edu-certs__dot" aria-hidden="true" />
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.detail}</p>
-                  </div>
+                  <article className="edu-cert-card">
+                    <div className="edu-cert-card__body">
+                      <h3>{item.title}</h3>
+                      <p>{item.detail}</p>
+                    </div>
+                    <time className="edu-cert-card__period">{item.period}</time>
+                  </article>
                 </li>
               ))}
             </ol>
@@ -174,7 +173,6 @@ export function Credentials() {
                   <span className="edu-strengths__icon" aria-hidden="true">
                     <StrengthIcon icon={item.icon} />
                   </span>
-                  <span className="edu-strengths__rule" aria-hidden="true" />
                   <p>{item.text}</p>
                 </li>
               ))}

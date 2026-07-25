@@ -462,11 +462,31 @@ export const education = {
 } as const;
 
 export const certifications = [
-  { title: "Agile Development", detail: "Certified Professional" },
-  { title: "Software Architect", detail: "Certified Professional" },
-  { title: "Test Driven Development (TDD)", detail: "Training Certification" },
-  { title: "Red Hat Linux System Administration", detail: "Certification" },
-  { title: "Code Warriors Challenges Participant", detail: "2014 & 2015" },
+  {
+    title: "Agile Development",
+    detail: "Certified Professional",
+    period: "2016 – Present",
+  },
+  {
+    title: "Software Architect",
+    detail: "Certified Professional",
+    period: "2016 – Present",
+  },
+  {
+    title: "Test Driven Development (TDD)",
+    detail: "Training Certification",
+    period: "2016 – Present",
+  },
+  {
+    title: "Red Hat Linux System Administration",
+    detail: "Certification",
+    period: "2016 – Present",
+  },
+  {
+    title: "Code Warriors Challenges Participant",
+    detail: "2014 & 2015",
+    period: "2014 – 2015",
+  },
 ] as const;
 
 export const strengths = [
