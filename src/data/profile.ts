@@ -94,30 +94,6 @@ export const trustedTech = [
 
 export const expertise = [
   {
-    id: "programming",
-    title: "Programming",
-    summary:
-      "Full-stack delivery across PHP frameworks and modern JavaScript stacks, with API-first design for maintainable products.",
-    items: [
-      {
-        name: "PHP / Laravel / CodeIgniter",
-        detail: "Enterprise backends, modular services, and long-lived application evolution.",
-      },
-      {
-        name: "React.js / Next.js",
-        detail: "Performant UI systems, App Router patterns, and production-ready frontends.",
-      },
-      {
-        name: "Node.js",
-        detail: "API services, real-time workflows, and integration layers between products.",
-      },
-      {
-        name: "REST APIs",
-        detail: "Clear contracts, versioning discipline, and third-party service orchestration.",
-      },
-    ],
-  },
-  {
     id: "architecture",
     title: "Architecture",
     summary:
@@ -142,26 +118,38 @@ export const expertise = [
     ],
   },
   {
-    id: "ai-ml",
-    title: "AI & ML",
+    id: "ai-automation",
+    title: "AI & Automation",
     summary:
-      "Practical AI delivery focused on conversational systems, OpenAI integrations, and automation outcomes.",
+      "Production AI systems and workflow automation — agents, retrieval pipelines, model APIs, and orchestration that remove manual effort.",
     items: [
       {
-        name: "OpenAI / ChatGPT APIs",
-        detail: "Prompted workflows, tool use, and production integration patterns.",
+        name: "AI Agents",
+        detail: "Tool-using agents that plan, act, and escalate across business and product workflows.",
       },
       {
-        name: "Conversational AI",
-        detail: "Customer-support chatbots across web, mobile, and social channels.",
+        name: "MCP",
+        detail: "Model Context Protocol integrations that connect assistants to real tools and data sources.",
       },
       {
-        name: "NLP Systems",
-        detail: "Intent handling and dialogue flows for support and operations teams.",
+        name: "OpenAI API",
+        detail: "Prompted production integrations, structured outputs, and reliable model orchestration.",
       },
       {
-        name: "ML-assisted automation",
-        detail: "AI-powered workflows that reduce manual effort in business processes.",
+        name: "RAG",
+        detail: "Retrieval-augmented generation grounded in private knowledge bases and operational documents.",
+      },
+      {
+        name: "LangChain",
+        detail: "Composable chains, agents, and memory patterns for maintainable AI application layers.",
+      },
+      {
+        name: "n8n",
+        detail: "Cross-app automation with retries, observability, and ownership across business systems.",
+      },
+      {
+        name: "Vector DB",
+        detail: "Embedding stores and similarity search powering RAG and semantic product features.",
       },
     ],
   },
@@ -186,6 +174,70 @@ export const expertise = [
       {
         name: "CI/CD",
         detail: "Automated build, test, and release pipelines for faster, safer shipping.",
+      },
+    ],
+  },
+  {
+    id: "programming",
+    title: "Programming",
+    summary:
+      "Full-stack delivery across PHP frameworks and modern JavaScript stacks, with API-first design for maintainable products.",
+    items: [
+      {
+        name: "PHP / Laravel / CodeIgniter",
+        detail: "Enterprise backends, modular services, and long-lived application evolution.",
+      },
+      {
+        name: "React.js / Next.js",
+        detail: "Performant UI systems, App Router patterns, and production-ready frontends.",
+      },
+      {
+        name: "Node.js",
+        detail: "API services, real-time workflows, and integration layers between products.",
+      },
+      {
+        name: "REST APIs",
+        detail: "Clear contracts, versioning discipline, and third-party service orchestration.",
+      },
+    ],
+  },
+  {
+    id: "project-management",
+    title: "Project Management",
+    summary:
+      "Delivery leadership that keeps architecture decisions executable — planning, risk, stakeholders, and team ownership.",
+    items: [
+      {
+        name: "Agile / Scrum",
+        detail: "Iterative delivery cadences with clear backlog ownership and inspect-adapt loops.",
+      },
+      {
+        name: "Sprint Planning",
+        detail: "Scope, capacity, and priority alignment so teams ship the right work each cycle.",
+      },
+      {
+        name: "Team Leadership",
+        detail: "Leading distributed engineering teams with mentoring, reviews, and accountability.",
+      },
+      {
+        name: "Risk Management",
+        detail: "Early identification of technical and delivery risks with practical mitigation paths.",
+      },
+      {
+        name: "Stakeholder Management",
+        detail: "Keeping product, ops, and leadership aligned on trade-offs and milestones.",
+      },
+      {
+        name: "Client Communication",
+        detail: "Clear status, expectation setting, and technical translation for client partners.",
+      },
+      {
+        name: "Budget & Resource Allocation",
+        detail: "Matching people and effort to roadmap priorities without burning critical paths.",
+      },
+      {
+        name: "Timeline Management",
+        detail: "Realistic schedules, dependency tracking, and on-time delivery discipline.",
       },
     ],
   },
@@ -238,10 +290,10 @@ export const expertise = [
     ],
   },
   {
-    id: "automation",
-    title: "Automation",
+    id: "marketing-automation",
+    title: "Marketing Automation",
     summary:
-      "Marketing and operations automation that connects CRM, outreach, and internal tools end to end.",
+      "Growth operations automation that connects CRM, outreach, and campaign systems end to end.",
     items: [
       {
         name: "ActiveCampaign / GoHighLevel",
@@ -252,8 +304,8 @@ export const expertise = [
         detail: "Outbound sequencing and lead-generation pipelines.",
       },
       {
-        name: "n8n / Make",
-        detail: "Cross-app automation connecting 10+ business systems.",
+        name: "Make",
+        detail: "Visual automation connecting apps when custom agent pipelines are not required.",
       },
       {
         name: "Sales funnel automation",
@@ -533,14 +585,20 @@ export const toolDomains = [
     title: "Integrations & Data Systems",
     summary:
       "Data planes and integration patterns that keep products fast, consistent, and automation-ready.",
-    items: ["Redis", "MySQL", "OpenAI APIs", "n8n", "Event-Driven Architecture"],
+    items: ["Redis", "MySQL", "OpenAI APIs", "n8n", "Event-Driven Architecture", "Vector DB"],
   },
   {
     id: "specialized",
     title: "Specialized Ecosystems",
     summary:
-      "Domain platforms I deploy when product strategy calls for Web3 or growth automation depth.",
-    items: ["Web3 / Smart Contracts", "Marketing Automation"],
+      "Domain platforms I deploy when product strategy calls for agents, Web3, or growth automation depth.",
+    items: [
+      "AI Agents",
+      "MCP",
+      "RAG / LangChain",
+      "Web3 / Smart Contracts",
+      "Marketing Automation",
+    ],
   },
 ] as const;
 
