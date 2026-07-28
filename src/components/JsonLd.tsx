@@ -19,7 +19,7 @@ export function JsonLd() {
       addressLocality: "Dhaka",
       addressCountry: "BD",
     },
-    sameAs: [profile.linkedin],
+    sameAs: [profile.linkedin, profile.github],
     knowsAbout: [
       "Software Architecture",
       "AI Systems",

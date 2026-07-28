@@ -7,6 +7,7 @@ export const profile = {
   email: "yousuf.gdls@gmail.com",
   linkedin: "https://linkedin.com/in/yousufcse06",
   linkedinLabel: "linkedin.com/in/yousufcse06",
+  github: "https://github.com/aleksandryky",
   cvPath: "/cv/Md_Yousuf_Ali_CV.pdf",
   bookingUrl: "https://calendly.com/yousuf-gdls/30min",
   bookingLabel: "Schedule an Architecture Consultation",
