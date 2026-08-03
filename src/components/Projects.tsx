@@ -83,7 +83,7 @@ export function Projects() {
                       <span aria-hidden="true">↗</span>
                     </a>
                   ) : (
-                    <span className="project-link project-link--muted">Internal system</span>
+                    <span className="project-link project-link--muted">Internal engagement</span>
                   )}
                 </div>
 

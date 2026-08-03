@@ -1,4 +1,4 @@
-type DiagramId = "safelot" | "cdr";
+type DiagramId = "safelot";
 
 function Node({
   x,
@@ -80,34 +80,11 @@ function SafeLotDiagram() {
   );
 }
 
-function CdrDiagram() {
-  const marker = "arch-arrow-cdr";
-  return (
-    <svg viewBox="0 0 760 280" className="arch-svg" role="img" aria-label="CDR monitoring architecture">
-      <defs>
-        <marker id={marker} markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L6,3 L0,6 Z" className="arch-marker" />
-        </marker>
-      </defs>
-      <Node x={20} y={100} w={130} h={56} label="IGW / ICX" sub="Call switches" />
-      <Arrow marker={marker} x1={150} y1={128} x2={198} y2={128} />
-      <Node x={200} y={100} w={140} h={56} label="CDR Ingest" sub="1M+ / day" />
-      <Arrow marker={marker} x1={340} y1={128} x2={388} y2={128} />
-      <Node x={390} y={40} w={140} h={56} label="Aggregation" sub="Batch + near-RT" />
-      <Node x={390} y={160} w={140} h={56} label="MySQL Store" sub="Indexed CDR" />
-      <Arrow marker={marker} x1={460} y1={96} x2={460} y2={160} />
-      <Arrow marker={marker} x1={530} y1={68} x2={578} y2={110} />
-      <Arrow marker={marker} x1={530} y1={188} x2={578} y2={146} />
-      <Node x={580} y={100} w={150} h={56} label="Ops Panel" sub="PHP dashboards" />
-    </svg>
-  );
-}
-
 export function ArchitectureDiagram({ id }: { id: DiagramId }) {
   return (
     <figure className="arch-diagram">
       <figcaption className="arch-diagram__caption">System architecture</figcaption>
-      {id === "safelot" ? <SafeLotDiagram /> : <CdrDiagram />}
+      {id === "safelot" ? <SafeLotDiagram /> : null}
     </figure>
   );
 }

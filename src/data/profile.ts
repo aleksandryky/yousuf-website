@@ -8,10 +8,10 @@ export const profile = {
   linkedin: "https://linkedin.com/in/yousufcse06",
   linkedinLabel: "linkedin.com/in/yousufcse06",
   github: "https://github.com/aleksandryky",
-  cvPath: "/cv/Md_Yousuf_Ali_CV.pdf",
+  cvPath: "/cv/Md_Yousuf_Ali_CV_2026-08.pdf",
   bookingUrl: "https://calendly.com/yousuf-gdls/30min",
   bookingLabel: "Schedule an Architecture Consultation",
-  photo: "/images/yousuf.jpg",
+  photo: "/images/yousuf.webp",
   headline:
     "Architecting resilient cloud infrastructure, enterprise distributed systems, and AI-driven automation workflows.",
   summary:
@@ -179,70 +179,6 @@ export const expertise = [
     ],
   },
   {
-    id: "programming",
-    title: "Programming",
-    summary:
-      "Full-stack delivery across PHP frameworks and modern JavaScript stacks, with API-first design for maintainable products.",
-    items: [
-      {
-        name: "PHP / Laravel / CodeIgniter",
-        detail: "Enterprise backends, modular services, and long-lived application evolution.",
-      },
-      {
-        name: "React.js / Next.js",
-        detail: "Performant UI systems, App Router patterns, and production-ready frontends.",
-      },
-      {
-        name: "Node.js",
-        detail: "API services, real-time workflows, and integration layers between products.",
-      },
-      {
-        name: "REST APIs",
-        detail: "Clear contracts, versioning discipline, and third-party service orchestration.",
-      },
-    ],
-  },
-  {
-    id: "project-management",
-    title: "Project Management",
-    summary:
-      "Delivery leadership that keeps architecture decisions executable — planning, risk, stakeholders, and team ownership.",
-    items: [
-      {
-        name: "Agile / Scrum",
-        detail: "Iterative delivery cadences with clear backlog ownership and inspect-adapt loops.",
-      },
-      {
-        name: "Sprint Planning",
-        detail: "Scope, capacity, and priority alignment so teams ship the right work each cycle.",
-      },
-      {
-        name: "Team Leadership",
-        detail: "Leading distributed engineering teams with mentoring, reviews, and accountability.",
-      },
-      {
-        name: "Risk Management",
-        detail: "Early identification of technical and delivery risks with practical mitigation paths.",
-      },
-      {
-        name: "Stakeholder Management",
-        detail: "Keeping product, ops, and leadership aligned on trade-offs and milestones.",
-      },
-      {
-        name: "Client Communication",
-        detail: "Clear status, expectation setting, and technical translation for client partners.",
-      },
-      {
-        name: "Budget & Resource Allocation",
-        detail: "Matching people and effort to roadmap priorities without burning critical paths.",
-      },
-      {
-        name: "Timeline Management",
-        detail: "Realistic schedules, dependency tracking, and on-time delivery discipline.",
-      },
-    ],
-  },
-  {
     id: "data",
     title: "Data",
     summary:
@@ -263,54 +199,6 @@ export const expertise = [
       {
         name: "Analytics",
         detail: "Operational dashboards and data products for decision support.",
-      },
-    ],
-  },
-  {
-    id: "blockchain",
-    title: "Blockchain",
-    summary:
-      "Web3 product engineering spanning wallets, exchanges, DeFi flows, and secure transaction journeys.",
-    items: [
-      {
-        name: "Web3 / Smart Contracts",
-        detail: "On-chain integrations and contract-backed product features.",
-      },
-      {
-        name: "Crypto Wallets",
-        detail: "Secure wallet connectivity for management and trading experiences.",
-      },
-      {
-        name: "Exchange Platforms",
-        detail: "Multi-currency trading, KYC, payments, and monitoring controls.",
-      },
-      {
-        name: "DeFi",
-        detail: "Decentralized finance applications including Elibrax and LifeDeFi work.",
-      },
-    ],
-  },
-  {
-    id: "marketing-automation",
-    title: "Marketing Automation",
-    summary:
-      "Growth operations automation that connects CRM, outreach, and campaign systems end to end.",
-    items: [
-      {
-        name: "ActiveCampaign / GoHighLevel",
-        detail: "Campaign orchestration, CRM workflows, and lead nurturing.",
-      },
-      {
-        name: "Instantly / Apollo.io",
-        detail: "Outbound sequencing and lead-generation pipelines.",
-      },
-      {
-        name: "Make",
-        detail: "Visual automation connecting apps when custom agent pipelines are not required.",
-      },
-      {
-        name: "Sales funnel automation",
-        detail: "Lead scoring, funnel stages, and measurable campaign operations.",
       },
     ],
   },
@@ -418,7 +306,6 @@ export const projects = [
     category: "AI Integration",
     tags: ["GoHighLevel", "ActiveCampaign", "Apollo.io", "Instantly"],
     featured: false,
-    url: "https://gohighlevel.com",
     challenge:
       "Growth teams were operating disconnected CRM, email, and outbound tools with inconsistent lead scoring and funnel stages.",
     decision:
@@ -453,19 +340,6 @@ export const projects = [
       "Delivered a blockchain management product with portfolio visibility and automated trading features.",
   },
   {
-    name: "Somee.blog",
-    category: "Cloud & Systems",
-    tags: ["Microservices", "EDA", "Web3", "Social"],
-    featured: false,
-    url: "https://somee.blog",
-    challenge:
-      "A high-traffic social platform needed low-latency interactions while integrating blockchain features without coupling every write path.",
-    decision:
-      "Adopted microservices and event-driven messaging so social interactions, feeds, and on-chain actions could scale independently.",
-    impact:
-      "Supported high-traffic, low-latency engagement patterns on a blockchain-integrated social architecture.",
-  },
-  {
     name: "Round-Right Healthcare SaaS",
     category: "Cloud & Systems",
     tags: ["Next.js", "PHP", "AWS", "Redis", "MySQL"],
@@ -483,26 +357,12 @@ export const projects = [
     category: "AI Integration",
     tags: ["GoHighLevel", "n8n", "Make", "Integrations"],
     featured: false,
-    url: "https://gohighlevel.com",
     challenge:
       "Operations depended on manual swivel-chair work across more than ten business applications.",
     decision:
       "Designed integration workflows in GoHighLevel, Make, and n8n with explicit triggers, retries, and ownership boundaries.",
     impact:
       "Cut manual operational effort by roughly 60% while keeping cross-app processes observable.",
-  },
-  {
-    name: "CDR Monitoring Panel",
-    category: "Cloud & Systems",
-    tags: ["PHP", "MySQL", "Telecom", "Analytics"],
-    featured: true,
-    diagram: "cdr",
-    challenge:
-      "Telecom operators needed real-time visibility into IGW/ICX call detail records at million-record daily volume.",
-    decision:
-      "Built an analytics control plane for high-volume CDR ingestion, aggregation, and operational dashboards with PHP and MySQL.",
-    impact:
-      "Processed 1M+ call records daily with advanced reporting for monitoring, investigation, and operational decision-making.",
   },
 ] as const;
 
@@ -592,14 +452,8 @@ export const toolDomains = [
     id: "specialized",
     title: "Specialized Ecosystems",
     summary:
-      "Domain platforms I deploy when product strategy calls for agents, Web3, or growth automation depth.",
-    items: [
-      "AI Agents",
-      "MCP",
-      "RAG / LangChain",
-      "Web3 / Smart Contracts",
-      "Marketing Automation",
-    ],
+      "Focused platforms for agentic AI, retrieval systems, and production automation depth.",
+    items: ["AI Agents", "MCP", "RAG / LangChain", "OpenAI APIs", "n8n"],
   },
 ] as const;
 

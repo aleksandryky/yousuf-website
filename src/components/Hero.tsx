@@ -23,17 +23,6 @@ function MailIcon() {
   );
 }
 
-function BriefcaseIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="btn__icon">
-      <path
-        fill="currentColor"
-        d="M9 3h6a2 2 0 0 1 2 2v1h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3V5a2 2 0 0 1 2-2Zm6 3V5H9v1h6ZM4 10v8h16v-8H4Z"
-      />
-    </svg>
-  );
-}
-
 function HighlightIcon({ type }: { type: (typeof heroHighlights)[number]["icon"] }) {
   const common = {
     viewBox: "0 0 24 24",
@@ -203,21 +192,22 @@ export function Hero() {
           </ul>
 
           <div className="hero__actions animate-in" style={{ animationDelay: "0.44s" }}>
-            <a className="btn btn--primary" href={profile.bookingUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              className="btn btn--primary"
+              href={profile.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <MailIcon />
               {profile.bookingLabel}
             </a>
-            <a className="btn btn--ghost" href={profile.cvPath} download>
-              <BriefcaseIcon />
+            <a className="hero__cv-link" href={profile.cvPath} download>
               Download CV
-            </a>
-            <a className="btn btn--ghost" href="#work">
-              View case studies
             </a>
           </div>
 
           <div className="hero-tech animate-in" style={{ animationDelay: "0.52s" }}>
-            <p className="hero-tech__label">Trusted technologies</p>
+            <p className="hero-tech__label">Core stack</p>
             <ul className="hero-tech__list">
               {trustedTech.map((tech) => (
                 <li key={tech.name}>
@@ -229,7 +219,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="hero__visual animate-in" style={{ animationDelay: "0.2s" }}>
+        <div className="hero__visual">
           <div className="hero__glow" aria-hidden="true" />
           <div className="hero__dots" aria-hidden="true" />
           <div className="hero__portrait">

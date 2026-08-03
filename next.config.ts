@@ -70,7 +70,7 @@ const nextConfig: NextConfig = {
           { key: "X-Content-Type-Options", value: "nosniff" },
           {
             key: "Content-Disposition",
-            value: 'attachment; filename="Md_Yousuf_Ali_CV.pdf"',
+            value: 'attachment; filename="Md_Yousuf_Ali_CV_2026-08.pdf"',
           },
           {
             key: "Cache-Control",

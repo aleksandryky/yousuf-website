@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "@/components/ThemeInit";
 import { nav, profile } from "@/data/profile";
 
 type NavIcon = (typeof nav)[number]["label"];
@@ -234,6 +235,7 @@ export function Header() {
           </nav>
 
           <div className="site-header__actions">
+            <ThemeToggle />
             <a className="btn btn--primary btn--sm site-header__cv" href={profile.cvPath} download>
               <DownloadIcon />
               Download CV

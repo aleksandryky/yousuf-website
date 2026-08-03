@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
-import { Manrope, Syne } from "next/font/google";
+import { Geist } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
+import { ThemeInit } from "@/components/ThemeInit";
 import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
-const syne = Syne({
-  variable: "--font-syne",
+const geist = Geist({
+  variable: "--font-geist",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
-  display: "swap",
-});
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -22,7 +16,7 @@ const siteUrl = getSiteUrl();
 
 const title = "Md Yousuf Ali · Principal Software Engineer";
 const description =
-  "Principal Software Engineer and Solution Architect with 15+ years of experience in AI systems, cloud architecture, blockchain platforms, and enterprise software delivery.";
+  "Principal Software Engineer and Solution Architect with 15+ years of experience designing cloud architecture, distributed systems, and AI-driven automation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -39,14 +33,13 @@ export const metadata: Metadata = {
     "Md Yousuf Ali",
     "Principal Software Engineer",
     "Solution Architect",
-    "AI Engineer",
     "Cloud Architect",
+    "Distributed Systems",
+    "AI Automation",
     "AWS",
     "Next.js",
     "React",
     "Laravel",
-    "Web3",
-    "Blockchain",
     "Dhaka",
     "Bangladesh",
   ],
@@ -76,7 +69,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description:
-      "Principal Software Engineer and Solution Architect specializing in AI, cloud, and scalable systems.",
+      "Principal Software Engineer and Solution Architect specializing in cloud infrastructure, distributed systems, and AI automation.",
     type: "profile",
     url: "/",
     siteName: "Md Yousuf Ali",
@@ -94,7 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description:
-      "Principal Software Engineer and Solution Architect specializing in AI, cloud, and scalable systems.",
+      "Principal Software Engineer and Solution Architect specializing in cloud infrastructure, distributed systems, and AI automation.",
     images: ["/images/yousuf.jpg"],
   },
 };
@@ -105,12 +98,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${syne.variable} ${manrope.variable} h-full`}
-      suppressHydrationWarning
-    >
+    <html lang="en" className={`${geist.variable} h-full`} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('yousuf-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();",
+          }}
+        />
+      </head>
       <body className="min-h-full antialiased">
+        <ThemeInit />
         <JsonLd />
         {children}
       </body>

@@ -16,7 +16,7 @@ export function Expertise() {
         <Reveal>
           <div className="section-head">
             <p className="section-label">Skills</p>
-            <h2 className="section-title">Core technical & delivery range</h2>
+            <h2 className="section-title">Principal technical domains</h2>
           </div>
         </Reveal>
 
