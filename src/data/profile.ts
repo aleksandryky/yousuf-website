@@ -61,8 +61,8 @@ export const aboutPillars = [
 
 export const aboutStats = [
   { value: "15+ Years", label: "Professional Experience", icon: "calendar" },
-  { value: "50+ Projects", label: "Delivered Successfully", icon: "layers" },
-  { value: "40+ Developers", label: "Led & Mentored", icon: "users" },
+  { value: "20+ Projects", label: "Delivered Successfully", icon: "layers" },
+  { value: "30+ Developers", label: "Led & Mentored", icon: "users" },
   { value: "Global Clients", label: "Across Multiple Industries", icon: "globe" },
 ] as const;
 
