@@ -460,19 +460,19 @@ export const toolDomains = [
 export const testimonials = [
   {
     quote:
-      "Yousuf elevates conversations from feature delivery to system design. He helped us clarify service boundaries, failure modes, and what actually needed to scale first.",
+      "Yousuf is an exceptional Principal Software Engineer who combines deep technical expertise with strong leadership and a clear understanding of business objectives. He has a remarkable ability to design scalable solutions, solve complex engineering challenges, and guide teams toward delivering high-quality products. His ownership, architectural thinking, and commitment to excellence make him someone you can confidently rely on for critical projects",
     name: "David N Baker",
     context: "Land Value Alpha Fund LLC",
   },
   {
     quote:
-      "As a mentee on his team, I learned how principal engineers think — trade-offs, operability, and ownership. Reviews were rigorous, practical, and career-shaping.",
+      "Yousuf is a highly skilled and dependable Senior Software Developer with a strong ability to transform complex requirements into clean, scalable, and reliable software solutions. His hands-on expertise, attention to detail, and problem-solving mindset consistently helped us deliver challenging projects successfully. He is also a great team player who takes ownership and always strives to maintain high engineering standards.",
     name: "Anowar Hossain",
     context: "Cloud It Limited",
   },
   {
     quote:
-      "He bridges architecture and execution. Complex integrations shipped with clear contracts, observability, and a team that understood the why behind every decision.",
+      "Yousuf is a highly capable Software Engineer who combines solid technical expertise with a strong problem-solving mindset. He consistently delivers clean, reliable solutions, adapts quickly to new technologies, and takes genuine ownership of his work. His professionalism and commitment to quality make him a valuable member of any engineering team.",
     name: "Mujibor Rahman",
     context: "Cention AB",
   },
