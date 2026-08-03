@@ -1340,8 +1340,12 @@ img {
 .skills-nav__btn.is-active {
   background: var(--ink);
   border-color: var(--ink);
-  color: var(--ink);
+  color: var(--bg);
   transform: translateY(-1px);
+}
+
+.skills-nav__btn.is-active .skills-nav__label {
+  color: var(--bg);
 }
 
 .skills-nav__index {
