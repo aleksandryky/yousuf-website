@@ -107,11 +107,14 @@ export function Projects() {
                     <ArchitectureDiagram id={project.diagram} />
                   ) : null}
 
-                  <ul className="project-tags" aria-label={`${project.name} technologies`}>
-                    {project.tags.map((tag) => (
-                      <li key={tag}>{tag}</li>
-                    ))}
-                  </ul>
+                  <div className="project-stack">
+                    <p className="project-stack__label">Tech stack</p>
+                    <ul className="project-tags" aria-label={`${project.name} tech stack`}>
+                      {project.tags.map((tag) => (
+                        <li key={tag}>{tag}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </Reveal>
             );

@@ -251,7 +251,20 @@ export const projects = [
   {
     name: "SafeLot.us — Vehicle Security & Tracking Platform",
     category: "Fintech & IoT",
-    tags: ["Next.js", "WebSockets", "AWS", "IoT", "Mobile"],
+    tags: [
+      "PHP",
+      "Laravel",
+      "Next.js",
+      "WebSockets",
+      "Redis",
+      "Python FastAPI",
+      "IoT",
+      "Mobile (Java / Kotlin)",
+      "MySQL",
+      "RDS",
+      "S3",
+      "CloudWatch",
+    ],
     featured: true,
     diagram: "safelot",
     url: "https://safelot.us",
@@ -265,7 +278,18 @@ export const projects = [
   {
     name: "Collect Tech LLC",
     category: "Fintech & IoT",
-    tags: ["PHP", "ASP.NET", "Next.js", "SQL Server", "AWS"],
+    tags: [
+      "PHP",
+      "Laravel",
+      "Next.js",
+      ".NET",
+      "MySQL",
+      "SQL Server",
+      "XML",
+      "RDS",
+      "S3",
+      "SFTP",
+    ],
     featured: false,
     url: "https://www.collecttech.com/",
     challenge:
@@ -278,7 +302,17 @@ export const projects = [
   {
     name: "Pelican Delivers",
     category: "Fintech & IoT",
-    tags: ["Marketplace", "Catalog", "Fulfillment", "AWS"],
+    tags: [
+      "Node.js",
+      "PHP",
+      "MySQL",
+      "RDS",
+      "Stripe",
+      "Next.js",
+      "Ant Design",
+      "iOS",
+      "Android",
+    ],
     featured: true,
     url: "https://pelicandelivers.com/about",
     challenge:
@@ -291,7 +325,18 @@ export const projects = [
   {
     name: "AI Chatbot Platform",
     category: "AI Integration",
-    tags: ["OpenAI", "NLP", "Next.js", "Omnichannel"],
+    tags: [
+      "Node.js",
+      "Next.js",
+      "MySQL",
+      "Vector DB",
+      "NLP",
+      "PyTorch",
+      "FastAPI",
+      "OpenAI",
+      "WebSockets",
+      "ML",
+    ],
     featured: false,
     url: "https://sol-chat.app",
     challenge:
@@ -304,7 +349,14 @@ export const projects = [
   {
     name: "Marketing Automation & Lead Generation",
     category: "AI Integration",
-    tags: ["GoHighLevel", "ActiveCampaign", "Apollo.io", "Instantly"],
+    tags: [
+      "ActiveCampaign",
+      "HyperTide",
+      "Instantly",
+      "GoHighLevel",
+      "n8n",
+      "Node.js",
+    ],
     featured: false,
     challenge:
       "Growth teams were operating disconnected CRM, email, and outbound tools with inconsistent lead scoring and funnel stages.",
@@ -316,7 +368,16 @@ export const projects = [
   {
     name: "Cryptocurrency Exchange Platform",
     category: "Fintech & IoT",
-    tags: ["Blockchain", "Wallets", "KYC", "Payments"],
+    tags: [
+      "PHP",
+      "Next.js",
+      "MySQL",
+      "Ethereum",
+      "BNB Network",
+      "KuCoin API",
+      "Wallets",
+      "Blockchain",
+    ],
     featured: false,
     url: "https://elibrax.com",
     challenge:
@@ -329,7 +390,17 @@ export const projects = [
   {
     name: "LifeCrypto Web Application",
     category: "Fintech & IoT",
-    tags: ["DeFi", "Web3", "Portfolio", "Trading"],
+    tags: [
+      "LifeDeFi Token",
+      "Node.js",
+      "Next.js",
+      "MySQL",
+      "Solidity",
+      "Ethereum",
+      "Binance Network",
+      "Blockchain",
+      "Fantom Network",
+    ],
     featured: false,
     url: "https://lifedefi.co/",
     challenge:
@@ -342,7 +413,18 @@ export const projects = [
   {
     name: "Round-Right Healthcare SaaS",
     category: "Cloud & Systems",
-    tags: ["Next.js", "PHP", "AWS", "Redis", "MySQL"],
+    tags: [
+      "Next.js",
+      "PHP",
+      "MySQL",
+      "Redis",
+      "WebSockets",
+      "CloudWatch",
+      "S3",
+      "AWS RDS",
+      "Push Notifications",
+      "Android",
+    ],
     featured: false,
     url: "https://round-right.com",
     challenge:
@@ -351,18 +433,6 @@ export const projects = [
       "Hardened the stack with Next.js + PHP services on AWS, Redis caching, and MySQL query/path optimization.",
     impact:
       "Improved performance, reliability, and day-to-day operator experience under production load.",
-  },
-  {
-    name: "Workflow Automation System",
-    category: "AI Integration",
-    tags: ["GoHighLevel", "n8n", "Make", "Integrations"],
-    featured: false,
-    challenge:
-      "Operations depended on manual swivel-chair work across more than ten business applications.",
-    decision:
-      "Designed integration workflows in GoHighLevel, Make, and n8n with explicit triggers, retries, and ownership boundaries.",
-    impact:
-      "Cut manual operational effort by roughly 60% while keeping cross-app processes observable.",
   },
 ] as const;
 
@@ -438,22 +508,46 @@ export const toolDomains = [
     id: "primary",
     title: "Primary Stack / Daily Architecture",
     summary:
-      "The systems I design and review every week — cloud foundations, application platforms, and delivery infrastructure.",
-    items: ["AWS", "Node.js", "Next.js", "Laravel", "Docker", "Kubernetes"],
+      "Application platforms I use to ship production systems across web, API, and service layers.",
+    items: [
+      "PHP / Laravel",
+      "Node.js",
+      "Next.js",
+      ".NET",
+      "Python FastAPI",
+      "Ant Design",
+    ],
   },
   {
     id: "integrations",
-    title: "Integrations & Data Systems",
+    title: "Cloud, Data & Realtime",
     summary:
-      "Data planes and integration patterns that keep products fast, consistent, and automation-ready.",
-    items: ["Redis", "MySQL", "OpenAI APIs", "n8n", "Event-Driven Architecture", "Vector DB"],
+      "Persistence, messaging, and AWS infrastructure that keep products fast, observable, and durable.",
+    items: [
+      "MySQL / SQL Server",
+      "Redis",
+      "AWS RDS",
+      "S3",
+      "CloudWatch",
+      "WebSockets",
+      "SFTP",
+      "Stripe",
+    ],
   },
   {
     id: "specialized",
-    title: "Specialized Ecosystems",
+    title: "AI, Automation & Web3",
     summary:
-      "Focused platforms for agentic AI, retrieval systems, and production automation depth.",
-    items: ["AI Agents", "MCP", "RAG / LangChain", "OpenAI APIs", "n8n"],
+      "Specialized product ecosystems spanning conversational AI, growth automation, IoT/mobile, and blockchain.",
+    items: [
+      "OpenAI / NLP / ML",
+      "Vector DB / PyTorch",
+      "n8n / GoHighLevel / ActiveCampaign",
+      "HyperTide / Instantly",
+      "Blockchain / Solidity",
+      "Ethereum / BNB / Fantom",
+      "IoT & Mobile (iOS / Android)",
+    ],
   },
 ] as const;
 
@@ -472,7 +566,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Yousuf is a highly capable Software Engineer who combines solid technical expertise with a strong problem-solving mindset. He consistently delivers clean, reliable solutions, adapts quickly to new technologies, and takes genuine ownership of his work. His professionalism and commitment to quality make him a valuable member of any engineering team.",
+      "He is a capable Software Engineer who combines solid technical expertise with a strong problem-solving mindset. He consistently delivers clean, reliable solutions, adapts quickly to new technologies, and takes genuine ownership of his work. His professionalism and commitment to quality make him a valuable member of any engineering team.",
     name: "Mujibor Rahman",
     context: "Cention AB",
   },

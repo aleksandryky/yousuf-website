@@ -18,8 +18,8 @@ export function Tools() {
             </p>
             <h2 className="section-title">Capability by domain</h2>
             <p className="tools-lede">
-              Grouped by how I actually use them: daily architecture, data/integration systems, and
-              specialized product ecosystems.
+              Grouped by how I actually use them across case studies: daily architecture, cloud/data
+              systems, and specialized AI, automation, and Web3 ecosystems.
             </p>
           </div>
         </Reveal>
